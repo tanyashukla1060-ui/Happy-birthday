@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday My Man ❤️</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#ff6a88,#ff99ac);color:white;text-align:center;overflow-x:hidden;}
+#intro{position:fixed;top:0;left:0;width:100%;height:100%;background:black;color:white;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:28px;z-index:10000;}
+#nameReveal{position:fixed;top:0;left:0;width:100%;height:100%;background:black;color:white;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:44px;letter-spacing:4px;z-index:9999;opacity:0;transition:opacity 1s;}
+.container{max-width:900px;margin:auto;padding:30px;}
+h1{font-size:42px;margin-bottom:5px;animation:glow 2s ease-in-out infinite alternate;}
+@keyframes glow{from{text-shadow:0 0 10px #fff}to{text-shadow:0 0 25px #ff2e63}}
+h2{font-weight:normal;margin-bottom:20px;}
+.message{font-size:20px;background:rgba(0,0,0,0.35);padding:20px;border-radius:15px;margin-bottom:30px;}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin-top:25px;}
+.gallery img{width:100%;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.3);}
+.cake{font-size:90px;animation:bounce 1.5s infinite;margin:20px 0;}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+button{padding:12px 22px;border:none;border-radius:10px;background:#ff2e63;color:white;font-size:16px;cursor:pointer;margin-top:15px;}
+.hidden{display:none;margin-top:20px;font-size:20px}
+.timer{font-size:22px;margin-top:25px;background:rgba(0,0,0,0.3);padding:15px;border-radius:12px;}
+.footer{margin-top:50px;font-size:18px}
+.heart{position:fixed;bottom:-20px;font-size:20px;animation:float 6s linear infinite;}
+@keyframes float{0%{transform:translateY(0);opacity:1}100%{transform:translateY(-100vh);opacity:0}}
+.reasons{margin-top:25px;background:rgba(0,0,0,0.35);padding:20px;border-radius:15px;}
+.reasons li{margin:8px 0}
+.slideshow img{width:100%;border-radius:15px;margin-top:15px;}
+.popup{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;color:white;text-align:center;padding:20px;z-index:9998;}
+.popup-box{background:#ff4d6d;padding:25px;border-radius:15px;max-width:420px;}
+.firework{position:fixed;width:6px;height:6px;background:white;border-radius:50%;animation:explode 1s ease-out forwards;}
+@keyframes explode{0%{transform:scale(1);opacity:1}100%{transform:scale(20);opacity:0}}
+</style>
+</head>
+<body><audio id="bgMusic" loop>
+  <source src="tune.mp3" type="audio/mpeg">
+</audio><div id="intro">
+  <div>✨ Anmol...</div>
+  <div style="margin-top:20px">Someone very special has a message for you ❤️</div>
+  <button onclick="startExperience()" style="margin-top:30px;padding:12px 20px;font-size:18px;border-radius:10px;background:#ff2e63;color:white;border:none;cursor:pointer;">Tap to Continue</button>
+</div><div id="nameReveal">
+  <div>TANYA ❤️ ANMOL</div>
+</div><div class="popup" id="popup">
+  <div class="popup-box">
+    <h2>💌 A Letter From Tanya</h2>
+    <p>Anmol, you are the most precious part of my life. Meeting you was the most beautiful moment for me. You mean everything to me and I feel lucky every day to have you. ❤️</p>
+    <button onclick="closePopup()">Open Your Surprise 🎁</button>
+  </div>
+</div><div class="container">
+<h1>Happy Birthday Anmol 🎂</h1>
+<h2>From Tanya, with love 💖</h2>
+<div class="cake">🎂</div>
+<div class="message">Happiest birthday bauva 💗<br>You deserve all happiness in this world 💟<br>I love you so so muchhhh 😘🥺</div>
+<button onclick="showLove()">Click for a Surprise 💌</button>
+<p id="love" class="hidden">Happiest birthday my man 💗<br>
+You are not just my boyfriend, you are the most special person in my life. 
+Tum mere liye sirf ek insaan nahi ho, tum meri happiness ho, mera comfort ho, meri safe place ho.
+
+Jab bhi main tumhare saath hoti hu to sab kuch perfect lagta hai. 
+Tum meri life ka wo hissa ho jiske bina main apni life imagine bhi nahi kar sakti.
+
+Thank you itna pyaar dene ke liye, mujhe samajhne ke liye aur hamesha mere saath khade rehne ke liye.
+
+Main bas ye chahti hu ki tumhari life me hamesha khushiyan ho, success ho aur main hamesha tumhare saath rahu.
+
+I love you more than words can explain. 
+And I promise, no matter what happens, I will always love you and stand by your side.
+
+Happy Birthday once again my love ❤️💞<br>— Yours forever, Tanya 💞</p>
+<button onclick="showReasons()">Why I Love You ❤️</button>
+<div id="reasons" class="reasons hidden">
+<h3>10 Reasons Why Tanya Loves You ❤️</h3>
+<ul style="list-style:none;padding:0">
+<li>❤️ You always make me smile</li>
+<li>❤️ You care for me</li>
+<li>❤️ You understand me</li>
+<li>❤️ You support me</li>
+<li>❤️ You make life happier</li>
+<li>❤️ You are my safe place</li>
+<li>❤️ Your hugs feel like home</li>
+<li>❤️ You make moments special</li>
+<li>❤️ You believe in me</li>
+<li>❤️ I love everything about you</li>
+</ul>
+</div>
+<div class="timer" id="loveTimer"></div>
+<h2>Our Memories 📸</h2>
+<div class="gallery">
+<img src="couple.jpg" alt="Tanya and Anmol">
+<img src="anmol1.jpg" alt="Anmol">
+<img src="anmol2.jpg" alt="Anmol">
+<img src="anmol3.jpg" alt="Anmol">
+<img src="anmol4.jpg" alt="Anmol">
+</div>
+<h2>Photo Slideshow 📸</h2>
+<div class="slideshow">
+<img id="slide" src="couple.jpg" />
+</div>
+<div style="margin:40px">
+<button onclick="loveExplosion()" style="font-size:18px;padding:14px 26px">I Love You My Man ❤️</button>
+</div>
+<div class="footer">Made with love by Tanya 💞</div>
+</div><script>
+function startExperience(){
+  document.getElementById('intro').style.display='none';
+  document.getElementById('bgMusic').play().catch(()=>{});
+  let reveal=document.getElementById('nameReveal');
+  reveal.style.opacity=1;
+
+  for(let j=0;j<25;j++){
+    setTimeout(()=>{
+      let fire=document.createElement('div');
+      fire.className='firework';
+      fire.style.left=Math.random()*100+'vw';
+      fire.style.top=Math.random()*100+'vh';
+      document.body.appendChild(fire);
+      setTimeout(()=>fire.remove(),1000);
+    }, j*100);
+  }
+  setTimeout(()=>{
+    reveal.style.display='none';
+    document.getElementById('popup').style.display='flex';
+  },3500);
+}
+
+function closePopup(){document.getElementById('popup').style.display='none';}
+function showLove(){document.getElementById('love').classList.remove('hidden');}
+function showReasons(){document.getElementById('reasons').classList.remove('hidden');}
+
+setInterval(()=>{
+  let heart=document.createElement('div');
+  heart.className='heart';
+  heart.innerHTML='❤️';
+  heart.style.left=Math.random()*100+'vw';
+  heart.style.fontSize=(Math.random()*20+10)+'px';
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),6000);
+},500);
+
+let startDate=new Date('2025-08-23');
+function updateTimer(){
+  let now=new Date();
+  let diff=now-startDate;
+  let days=Math.floor(diff/(1000*60*60*24));
+  let hours=Math.floor((diff/(1000*60*60))%24);
+  let minutes=Math.floor((diff/(1000*60))%60);
+  document.getElementById('loveTimer').innerText='Tanya ❤️ You since our first meeting: '+days+' days '+hours+' hours '+minutes+' minutes';
+}
+setInterval(updateTimer,1000);
+
+let photos=['couple.jpg','anmol1.jpg','anmol2.jpg','anmol3.jpg','anmol4.jpg'];
+let i=0;
+setInterval(()=>{i=(i+1)%photos.length;document.getElementById('slide').src=photos[i];},3000);
+
+setInterval(()=>{
+  let fire=document.createElement('div');
+  fire.className='firework';
+  fire.style.left=Math.random()*100+'vw';
+  fire.style.top=Math.random()*100+'vh';
+  document.body.appendChild(fire);
+  setTimeout(()=>fire.remove(),1000);
+},900);
+
+function loveExplosion(){
+  for(let i=0;i<100;i++){
+    setTimeout(()=>{
+      let heart=document.createElement('div');
+      heart.innerHTML='❤️';
+      heart.style.position='fixed';
+      heart.style.left=Math.random()*100+'vw';
+      heart.style.top=Math.random()*100+'vh';
+      heart.style.fontSize=(Math.random()*30+20)+'px';
+      heart.style.zIndex=9999;
+      document.body.appendChild(heart);
+      setTimeout(()=>heart.remove(),3000);
+    },i*30);
+  }
+  let msg=document.createElement('div');
+  msg.innerText='Tanya will always love her bachha ❤️';
+  msg.style.position='fixed';
+  msg.style.bottom='40px';
+  msg.style.left='50%';
+  msg.style.transform='translateX(-50%)';
+  msg.style.background='#ff2e63';
+  msg.style.padding='15px 25px';
+  msg.style.borderRadius='12px';
+  msg.style.fontSize='22px';
+  msg.style.zIndex=9999;
+  msg.style.boxShadow='0 10px 25px rgba(0,0,0,0.4)';
+  document.body.appendChild(msg);
+  setTimeout(()=>msg.remove(),5000);
+}
+</script></body>
+</html>
